@@ -21,4 +21,5 @@ Route::group(['prefix'=>'admin','middleware'=>'auth','namespace'=>'admin'], func
 	Route::get('dashboard', 'dashboardController@index')->name('admin.dashboard');
 	Route::resource('slider', 'sliderController');
 	Route::resource('category', 'CategoryController');
+	Route::resource('item', 'ItemController');
 });
