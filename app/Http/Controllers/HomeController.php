@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Slider;
+use App\Category;
+use App\Items;
 class HomeController extends Controller
 {
     /**
@@ -20,6 +22,8 @@ class HomeController extends Controller
     public function index()
     {
         $sliders = Slider::all();
-        return view('welcome',compact('sliders'));
+        $categories= Category::all();
+        $items= Items::all();
+        return view('welcome',compact('sliders','categories','items'));
     }
 }
