@@ -146,7 +146,7 @@
                                 @foreach($items as $item)
                                 <li class="item" id="{{ $item->category->slug }}">
                                     <a href="#">
-                                        <img style="height: 300px; width: 369px;" src="{{ asset('uploads/item/'.$item->image) }}" class="img-responsive" alt="Food" >
+                                        <img style="height: 250px; width: 300px;" src="{{ asset('uploads/item/'.$item->image) }}" class="img-responsive" alt="Food" >
                                         <div class="menu-desc text-center">
                                             <span>
                                                 <h3>{{ $item->name }}</h3>
