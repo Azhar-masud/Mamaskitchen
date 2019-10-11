@@ -1,10 +1,13 @@
 <?php
 
 namespace App\Http\Controllers\admin;
+
+use App\Notifications\ReservationConfirmed;
 use Brian2694\Toastr\Facades\Toastr;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Reservation;
+use Illuminate\Support\Facades\Notification;
 class ReservationController extends Controller
 {
     public function index()
@@ -17,6 +20,10 @@ class ReservationController extends Controller
     	$reservation=Reservation::find($id);
     	$reservation->status=true;
     	$reservation->save();
+
+        Notification::route('mail', $reservation->email)
+            ->notify(new ReservationConfirmed());
+
     	Toastr::success('Reservation successfully Comfirmed!','Success',["positionClass" => "toast-top-right"]);
         return redirect()->back();
     }

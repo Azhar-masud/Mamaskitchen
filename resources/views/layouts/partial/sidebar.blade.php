@@ -5,8 +5,8 @@
         Tip 2: you can also add an image using data-image tag
     -->
       <div class="logo">
-        <a href="http://www.creative-tim.com" class="simple-text logo-normal">
-          Creative Tim
+        <a href="{{route('admin.dashboard')}}" class="simple-text logo-normal">
+            Mamas Kitchen
         </a>
       </div>
       <div class="sidebar-wrapper">
@@ -36,29 +36,23 @@
               </a>
           </li>
           <li class="nav-item {{ Request::is('admin/reservation*') ? 'active': '' }}">
-                <a class="nav-link" href="{{ route('reservation.index') }}">
-                    <i class="material-icons">chrome_reader_mode</i>
-                    <p>Reservations</p>
-                </a>
+              <a class="nav-link" href="{{ route('reservation.index') }}">
+                  <i class="material-icons">chrome_reader_mode</i>
+                  <p>Reservations</p>
+              </a>
           </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="./icons.html">
-              <i class="material-icons">bubble_chart</i>
-              <p>Icons</p>
-            </a>
+          <li class="nav-item {{ Request::is('admin/contact*') ? 'active': '' }}">
+              <a class="nav-link" href="{{ route('contact.index') }}">
+                  <i class="material-icons">message</i>
+                  <p>Contact Message</p>
+              </a>
           </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="./map.html">
-              <i class="material-icons">location_ons</i>
-              <p>Maps</p>
-            </a>
-          </li>
-          <li class="nav-item ">
+          <!-- <li class="nav-item ">
             <a class="nav-link" href="./notifications.html">
               <i class="material-icons">notifications</i>
               <p>Notifications</p>
             </a>
-          </li>
+          </li> -->
         </ul>
       </div>
     </div>

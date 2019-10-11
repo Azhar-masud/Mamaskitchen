@@ -41,9 +41,9 @@
             							<td>{{ $reserve->message}}</td>
                           <td>
                             @if($reserve->status == true)
-                              <span class="label label-info">Confirmed</span>
+                              <span class="bg-info ">Confirmed</span>
                             @else
-                              <span class="label label-danger">Not Confirmed Yet</span>
+                              <span class="bg-danger">Not Confirmed Yet</span>
                             @endif  
                           </td>
                           <td>

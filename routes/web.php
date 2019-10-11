@@ -16,6 +16,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::post('reservation','ReservationController@reserv')->name('reserv');
+Route::post('contact','ContactController@sendMessage')->name('contact.send');
 
 Route::group(['prefix'=>'admin','middleware'=>'auth','namespace'=>'admin'], function(){
 	Route::get('dashboard', 'dashboardController@index')->name('admin.dashboard');
@@ -25,5 +26,9 @@ Route::group(['prefix'=>'admin','middleware'=>'auth','namespace'=>'admin'], func
 	Route::get('reservation','ReservationController@index')->name('reservation.index');
 	Route::post('reservation/{id}','ReservationController@status')->name('reservation.status');
 	Route::delete('reservation/{id}','ReservationController@destroy')->name('reservation.destroy');
+
+	Route::get('contact','ContactController@index')->name('contact.index');
+	Route::get('contact/{id}','ContactController@show')->name('contact.show');
+	Route::delete('contact/{id}','ContactController@destroy')->name('contact.destroy');
 });
 
