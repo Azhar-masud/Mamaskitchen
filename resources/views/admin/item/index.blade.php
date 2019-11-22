@@ -49,12 +49,14 @@
                             @csrf
                             @method('DELETE')
                           </form>
-                          <button type="button" class="btn btn-danger btn-sm" onclick="if (confirm('aer you sure? you want to delete this?')) {
+                          <button type="button" onclick="deleteads({{ $item->id }})" class="btn btn-danger btn-sm ml-2" data-toggle="modal" data-target=".bd-example-modal-lg" title="Delete"><i class="material-icons">delete</i></button>
+
+                          {{-- <button type="button" class="btn btn-danger btn-sm" onclick="if (confirm('aer you sure? you want to delete this?')) {
                             event.preventDefault();
                             document.getElementById('delete-form-{{$item->id}}').submit();
                           }else{
                             event.preventDefault();
-                          }"><i class="material-icons">delete</i></button>
+                          }"><i class="material-icons">delete</i></button> --}}
                           </td>
             						</tr>
 

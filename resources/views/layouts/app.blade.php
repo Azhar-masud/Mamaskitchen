@@ -51,9 +51,9 @@
         </div>
   <div class="fixed-plugin">
     <div class="dropdown show-dropdown">
-      <a href="#" data-toggle="dropdown">
+      {{-- <a href="#" data-toggle="dropdown">
         <i class="fa fa-cog fa-2x"> </i>
-      </a>
+      </a> --}}
       <ul class="dropdown-menu">
         <li class="header-title"> Sidebar Filters</li>
         <li class="adjustments-line">
@@ -160,6 +160,8 @@
   <script src="{{asset('backend/material-dashboard.js?v=2.1.1')}}" type="text/javascript"></script>
   <!-- Material Dashboard DEMO methods, don't include it in your project! -->
   <script src="{{asset('backend/demo/demo.js')}}"></script>
+  <script src="{{asset('backend/js/sweetaleartmake.js')}}" type="text/javascript"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
   <script>
     $(document).ready(function() {
       $().ready(function() {
